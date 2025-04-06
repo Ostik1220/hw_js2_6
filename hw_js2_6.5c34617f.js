@@ -160,15 +160,15 @@
       });
     }
   }
-})({"kN8ve":[function(require,module,exports,__globalThis) {
+})({"cAN69":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 62837;
+var HMR_SERVER_PORT = 50485;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "d6ea1d42532a7575";
+var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
+module.bundle.HMR_BUNDLE_ID = "c64b7b7e5c34617f";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -666,8 +666,69 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"4M6V8":[function(require,module,exports,__globalThis) {
+},{}],"hHv2i":[function(require,module,exports,__globalThis) {
+var _calc = require("./js/calc");
+const plusBtn = document.querySelector(".plus");
+const minusBtn = document.querySelector(".minus");
+plusBtn.addEventListener("click", (e)=>{
+    const a = Number(document.querySelector(".one").value);
+    const b = Number(document.querySelector(".two").value);
+    const result = (0, _calc.adder)(a, b);
+    document.querySelector("#result").innerHTML = result;
+    if (isNaN(document.querySelector("#result").innerHTML)) document.querySelector("#result").innerHTML = "\u0432\u0438 \u0432\u0432\u043E\u0434\u0435\u0442\u0435 \u043D\u0435 \u0447\u0438\u0441\u043B\u0430";
+});
+minusBtn.addEventListener("click", (e)=>{
+    const a = Number(document.querySelector(".one").value);
+    const b = Number(document.querySelector(".two").value);
+    const result = (0, _calc.minus)(a, b);
+    document.querySelector("#result").innerHTML = result;
+    if (isNaN(document.querySelector("#result").innerHTML)) document.querySelector("#result").innerHTML = "\u0432\u0438 \u0432\u0432\u043E\u0434\u0435\u0442\u0435 \u043D\u0435 \u0447\u0438\u0441\u043B\u0430";
+});
 
-},{}]},["kN8ve","4M6V8"], "4M6V8", "parcelRequiree541", {})
+},{"./js/calc":"hjV1M"}],"hjV1M":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "adder", ()=>adder);
+parcelHelpers.export(exports, "minus", ()=>minus);
+function adder(x, y) {
+    let b = x + y;
+    return b;
+}
+function minus(x, y) {
+    let b = x - y;
+    return b;
+}
 
-//# sourceMappingURL=hw_js2_6.59712999.js.map
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["cAN69","hHv2i"], "hHv2i", "parcelRequiree541", {})
+
+//# sourceMappingURL=hw_js2_6.5c34617f.js.map
